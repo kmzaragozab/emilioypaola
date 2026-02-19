@@ -1,0 +1,187 @@
+/* ========== SECCIÓN REGALOS (BANK STYLE) ========== */
+.gifts-section {
+    min-height: 80vh; /* No necesita ser tan alta */
+    background: linear-gradient(180deg, #f5f0eb 0%, #e8e0d8 100%);
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.gifts-container {
+    max-width: 600px;
+    width: 100%;
+}
+
+/* Título estilo Pinyon (Firma) */
+.gifts-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 3.5rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+/* El mensaje principal - Muy legible */
+.gifts-message {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: #4a3b3b; /* Color oscuro para contraste */
+    font-weight: 600; /* Letra un poco más gruesa */
+    line-height: 1.6;
+    margin-bottom: 40px;
+    padding: 0 10px;
+}
+
+/* === TARJETA BANCARIA === */
+.bank-card {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: 
+        0 10px 30px rgba(168, 149, 108, 0.15),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.9); /* Borde sutil */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.bank-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Borde dorado superior elegante */
+.bank-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 5px;
+    background: var(--gold);
+}
+
+/* Contenedor del Logo */
+.bank-logo-container {
+    height: 60px; /* Altura fija para controlar el logo */
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bank-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    /* Si el logo de BBVA es azul muy chillón y quieres dorarlo, descomenta esto: */
+    /* filter: sepia(1) hue-rotate(5deg) saturate(1.5) contrast(0.9); */
+}
+
+/* Detalles de la cuenta */
+.bank-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.detail-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* ← ESTO centra todo */
+    gap: 8px;
+}
+
+.detail-value {
+    display: inline-flex;  /* Mantiene número + botón juntos */
+    gap: 10px;
+}
+
+.detail-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.detail-value {
+    font-family: 'Cinzel', serif;
+    font-size: 1.2rem;
+    color: var(--dark-text);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Clase útil para que el usuario pueda copiar fácil el número en celular */
+.select-all {
+    user-select: all;
+    cursor: pointer;
+}
+
+.detail-line {
+    width: 50%;
+    height: 1px;
+    background: rgba(168, 149, 108, 0.3);
+    margin: 10px auto;
+}
+
+/* Mensaje final */
+.gifts-footer {
+    margin-top: 30px;
+    font-family: 'Great Vibes', cursive;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Ajustes Móvil */
+@media (max-width: 480px) {
+    .gifts-title { font-size: 2.8rem; }
+    .gifts-message { font-size: 1.1rem; }
+    .bank-card { padding: 30px 20px; }
+    .detail-value { font-size: 1rem; }
+}
+
+.detail-value {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.copy-btn {
+    opacity: 1;
+    background: rgba(168, 149, 108, 0.1);
+    border: 1px solid rgba(168, 149, 108, 0.3);
+    border-radius: 6px;
+    padding: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+}
+
+
+
+.copy-btn:hover {
+    background: var(--gold);
+    color: white;
+    transform: scale(1.1);
+}
+
+.copy-btn:active {
+    transform: scale(0.95);
+}
+
+.copy-btn.copied {
+    background: #4caf50;
+    border-color: #4caf50;
+    color: white;
+}
+
+.copy-btn svg {
+    display: block;
+}

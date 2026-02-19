@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Emilio & Paola</title>
+    <link rel="stylesheet" href="./envelope_style.css">
+    <link rel="stylesheet" href="./navbar_style.css">
+    <link rel="stylesheet" href="./hero-section.css">
+    <link rel="stylesheet" href="./story-section.css">
+    <link rel="stylesheet" href="./event-section.css">
+    <link rel="stylesheet" href="./gifts-section.css">
+    <link rel="stylesheet" href="./rsvp-section.css">
+    <link rel="stylesheet" href="./polaroid-gallery.css">
+    <script src="js/glide_config.js"></script>
+    
+
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+    <div class="navbar-logo">E&P</div>
+    
+    <!-- Menú horizontal (Desktop) -->
+    <ul class="navbar-menu">
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#story">Nuestra Historia</a></li>
+        <li><a href="#event">El Evento</a></li>
+        <li><a href="#gallery">Galería</a></li>
+        <li><a href="#gifts">Regalos</a></li>
+        <li><a href="#rsvp">Confirmar Asistencia</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+</nav>
+
+<div class="menu-overlay" id="menuOverlay"></div>
+    <aside class="sidebar-menu" id="sidebarMenu">
+        <div class="menu-header">
+            <h2>Emilio & Paola</h2>
+            <p>06 · 06 · 2026</p>
+        </div>
+        
+        <nav>
+            <ul class="menu-nav">
+                <li>
+                    <a href="#home">
+                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        </svg>
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#story">
+                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                        </svg>
+                        Nuestra Historia
+                    </a>
+                </li>
+                <li>
+                    <a href="#event">
+                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                        </svg>
+                        El Evento
+                    </a>
+                </li>
+                <li>
+                    <a href="#gallery">
+                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                        Galería
+                    </a>
+                </li>
+                <li>
+                    <a href="#gifts">
+                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 12 20 22 4 22 4 12"></polyline>
+                            <rect x="2" y="7" width="20" height="5"></rect>
+                            <line x1="12" y1="22" x2="12" y2="7"></line>
+                            <path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path>
+                            <path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path>
+                        </svg>
+                        Regalos
+                    </a>
+                </li>
+                <li>
+                    <a href="#rsvp">
+                        <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        Confirmar Asistencia
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="menu-footer">
+            <p>Con amor</p>
+        </div>
+    </aside>
+
+    <!-- Partículas de fondo flotantes -->
+    <div class="particles-bg" id="particlesBg"></div>
+
+    <!-- ========== HERO/PORTADA CON COUNTDOWN ========== -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <p class="hero-subtitle">TE ESPERAMOS</p>
+            
+            <h1 class="hero-title">Emilio & Paola</h1>
+            
+            <p class="hero-date">06 . 06 . 2026</p>
+            
+            <div class="hero-divider"></div>
+            
+            <p class="hero-announcement">¡Nos Casamos!</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown" id="countdown">
+                <div class="countdown-box">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Días</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 5v14M19 12l-7 7-7-7"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ========== SECCIONES DEMO (Para probar navbar) ========== -->
+    <div class="main-sections" style="display: none;">
+
+        <!-- ========== SECCIÓN NUESTRA HISTORIA ========== -->
+        <section class="story-section" id="story">
+            <div class="story-container">
+                <div style="text-align: center; padding: 40px 20px;">
+                    <h2 style="font-family: 'Pinyon Script', cursive; font-size: 3rem; color: var(--dark-text); margin-bottom: 20px;">Presentación</h2>
+                </div>
+                <div class="story-card">
+                    <div class="story-content">
+                        <p class="story-intro">Nuestro viaje juntos</p>
+                        <p class="story-text">
+                            Nos encontramos, nos elegimos y nos casamos... junto a nuestras 
+                            familias, nos complace compartir contigo este día tan especial.
+                        </p>
+                        <p class="story-initials">E & P</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SECCIÓN EL EVENTO ========== -->
+        <section class="event-section" id="event">
+            <div class="event-container">
+
+                <!-- Header -->
+                <div class="event-header">
+                    <p class="event-label">Te esperamos</p>
+                    <h2 class="event-title">El Evento</h2>
+                    <div class="event-date-badge">
+                        <span>Sábado</span>
+                        <div class="dot"></div>
+                        <span>6 de Junio</span>
+                        <div class="dot"></div>
+                        <span>2026</span>
+                    </div>
+                </div>
+
+                <!-- Ubicaciones centradas automáticamente -->
+                <div class="event-grid">
+                    <div class="location-row">
+
+                        <!-- Card Ceremonia & Recepción -->
+                        <div class="location-card">
+                            <p class="card-type">Ceremonia &amp; Recepción</p>
+                            <h3 class="card-name">Primera Iglesia Bautista Xi'iui</h3>
+                            <p class="card-address">Vicente Fox 7, Puerto de la Cruz</p>
+                            <p class="card-address">Santa Catarina, S.L.P.</p>
+                            <div class="card-time">
+                                <svg viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                                <span>4:00 PM</span>
+                            </div>
+                            <a href="https://maps.app.goo.gl/xmKkyL5GC4g9FkRK8" 
+                            target="_blank" class="maps-btn">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                Ver en Maps
+                            </a>
+                        </div>
+
+                    </div>
+                    <!-- Card Dress Code -->
+                    <div class="dresscode-card">
+                        <div class="dresscode-text">
+                            <p class="dresscode-type">Código de Vestimenta</p>
+                            <h3 class="dresscode-title">Semi Formal</h3>
+                            <p class="dresscode-desc">
+                                Luce elegante y cómodo en este día tan especial. 
+                                Elige un look refinado que refleje la ocasión.
+                            </p>
+                            <p class="dresscode-desc" style="margin-top: 12px;">
+                                <strong>🤍 El blanco es exclusivo para la novia.</strong>
+                            </p>
+                            <p class="dresscode-desc">
+                                ¡Anímate a brillar con nosotros!
+                            </p>
+                        </div>
+
+                        <div class="dresscode-image">
+                            <img src="./images/clothes.png" alt="Ejemplo Dress Code" class="dc-clean-img">
+                        </div>
+                    </div>
+
+                </div><!-- fin event-grid -->
+            </div>
+        </section>
+        <section class="gifts-section" id="gifts">
+            <div class="gifts-container">
+                <h2 class="gifts-title">Mesa de Regalos</h2>
+                <p class="gifts-message">
+                    Lo más importante es tu presencia, pero si deseas hacer un regalo, aquí tienes nuestros datos:
+                </p>
+
+                <div class="bank-card">
+                    <div class="bank-logo-container">
+                        <img src="./images/bbva.png" alt="Logo BBVA" class="bank-img">
+                    </div>
+
+                    <div class="bank-details">
+                        <div class="detail-row">
+                            <span class="detail-label">Beneficiario</span>
+                            <span class="detail-value">Emilio Puga Gabino</span>
+                        </div>
+                        <div class="detail-line"></div>
+                        <div class="detail-row">
+                            <span class="detail-label">Número de Cuenta</span>
+                            <span class="detail-value select-all">
+                                4152314566210707
+                                <button class="copy-btn" onclick="copyToClipboard('4152314566210707', this)">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </span>
+                        </div>
+                        <div class="detail-row">
+                            <span class="detail-label">CLABE Interbancaria</span>
+                            <span class="detail-value select-all">
+                                012322015618817511
+                                <button class="copy-btn" onclick="copyToClipboard('012322015618817511', this)">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2">
+                                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2 2h9a2 2 0 0 1 2 2v1"></path>
+                                    </svg>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="bank-decoration"></div>
+                </div>
+
+                <p class="gifts-footer">¡Gracias por ser parte de nuestra vida!</p>
+            </div>
+        </section>
+
+        <section class="gallery-section" id="gallery">
+            <div class="gallery-header">
+                <h2 class="gallery-title">Galería</h2>
+                <p class="gallery-subtitle">¡Gracias por ser parte de nuestra vida!</p>
+            </div>
+
+            <div class="gallery-scroll-container" id="galleryScroll">
+                <div class="gallery-track">
+                    <div class="polaroid">
+                        <img src="./images/img1.jpg" alt="Foto 1" class="polaroid-img">
+                    </div>
+                    <div class="polaroid">
+                        <img src="./images/img2.jpg" alt="Foto 2" class="polaroid-img">
+                    </div>
+                    <div class="polaroid">
+                        <img src="./images/img3.jpg" alt="Foto 3" class="polaroid-img">
+                    </div>
+                    <div class="polaroid">
+                        <img src="./images/img4.jpg" alt="Foto 4" class="polaroid-img">
+                    </div>
+                    <div class="polaroid">
+                        <img src="./images/img5.jpg" alt="Foto 5" class="polaroid-img">
+                    </div>
+                    <div class="polaroid">
+                        <img src="./images/img6.jpg" alt="Foto 6" class="polaroid-img">
+                    </div>
+                    <div class="polaroid">
+                        <img src="./images/img7.jpg" alt="Foto 7" class="polaroid-img">
+                    </div>
+                    <div class="polaroid">
+                        <img src="./images/img8.jpg" alt="Foto 8" class="polaroid-img">
+                    </div>
+                </div>
+            </div>
+
+            <p class="scroll-hint">← Arrastra para ver más →</p>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <img src="" alt="Foto ampliada" class="lightbox-img" id="lightboxImg">
+        </div>
+
+        
+        <section class="rsvp-section" id="rsvp">
+            <div class="rsvp-container">
+                <!-- Header -->
+                <div class="rsvp-header">
+                    <h2 class="rsvp-title">Confirmar Asistencia</h2>
+                    <p class="rsvp-subtitle">
+                        Tu presencia es muy importante para nosotros. 
+                        Por favor, confirma tu asistencia para poder preparar todo con detalle.
+                    </p>
+                </div>
+
+                <!-- Card del formulario -->
+                <div class="rsvp-card">
+                    <form id="rsvpForm">
+                        <!-- Nombre completo -->
+                        <div class="form-group">
+                            <label class="form-label required">Nombre completo</label>
+                            <input 
+                                type="text" 
+                                name="nombre" 
+                                class="form-input"
+                                placeholder="Juan Pérez García"
+                                required
+                            >
+                        </div>
+
+                        <!-- Email y Teléfono en fila -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label required">Email</label>
+                                <input 
+                                    type="email" 
+                                    name="email" 
+                                    class="form-input"
+                                    placeholder="correo@ejemplo.com"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Teléfono</label>
+                                <input 
+                                    type="tel" 
+                                    name="telefono" 
+                                    class="form-input"
+                                    placeholder="444 123 4567"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Confirmación y Número de invitados en fila -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label required">¿Confirmas asistencia?</label>
+                                <select name="confirmacion" class="form-select" required>
+                                    <option value="">Selecciona...</option>
+                                    <option value="Sí">Sí</option>
+                                    <option value="No">No</option>
+                                    <option value="Tal vez">Tal vez</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="form-label">Número de acompañantes</label>
+                                <input 
+                                    type="number" 
+                                    name="invitados" 
+                                    class="form-input"
+                                    value="0"
+                                    min="0"
+                                    max="10"
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Mensaje -->
+                        <div class="form-group">
+                            <label class="form-label">Mensaje para los novios</label>
+                            <textarea 
+                                name="mensaje" 
+                                class="form-textarea"
+                                placeholder="Déjanos un mensaje especial..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Botón submit -->
+                        <button type="submit" class="form-submit">
+                            Enviar Confirmación
+                        </button>
+
+                        <!-- Mensaje de feedback -->
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+                <!-- Footer -->
+                <p class="rsvp-footer">
+                    ¡Esperamos contar con tu presencia en nuestro día especial!
+                </p>
+            </div>
+        </section>
+    </div>
+            
+            <div class="envelope-overlay" id="envelope">
+        <div class="flap-container left">
+            <div class="layer border"></div>
+            <div class="layer paper"></div>
+        </div>
+        <div class="flap-container right">
+            <div class="layer border"></div>
+            <div class="layer paper"></div>
+        </div>
+        <div class="seal" id="seal">
+            <span>E&P</span>
+        </div>
+        <div class="instruction">Tocar para abrir</div>
+    </div>
+    <div class="particle-burst" id="particleBurst"></div>
+
+    <script>
+        const seal = document.getElementById('seal');
+        const envelope = document.getElementById('envelope');
+        const body = document.body;
+        const particleBurst = document.getElementById('particleBurst');
+        const particlesBg = document.getElementById('particlesBg');
+        function createBackgroundParticles() {
+            for (let i = 0; i < 30; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 4 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                particlesBg.appendChild(particle);
+            }
+        }
+        function createParticleBurst() {
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'burst-particle';
+                
+                const angle = (Math.PI * 2 * i) / particleCount;
+                const velocity = 150 + Math.random() * 100;
+                const duration = 800 + Math.random() * 400;
+                
+                const tx = Math.cos(angle) * velocity;
+                const ty = Math.sin(angle) * velocity;
+                
+                particle.style.animation = `burstParticle ${duration}ms ease-out forwards`;
+                particle.style.setProperty('--tx', tx + 'px');
+                particle.style.setProperty('--ty', ty + 'px');
+                
+                particleBurst.appendChild(particle);
+                
+                setTimeout(() => particle.remove(), duration);
+            }
+        }
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes burstParticle {
+                0% {
+                    transform: translate(0, 0) scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translate(var(--tx), var(--ty)) scale(0);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Evento de click en el sello
+        seal.addEventListener('click', () => {
+            // Abrir el sobre
+            envelope.classList.add('open');
+            
+            // Crear explosión de partículas
+            createParticleBurst();
+            
+            // Mostrar contenido con delay
+            setTimeout(() => {
+                body.classList.add('show-content');
+                createBackgroundParticles();
+                
+                // Mostrar las secciones principales
+                const mainSections = document.querySelector('.main-sections');
+                if (mainSections) {
+                    mainSections.style.display = 'block';
+                }
+            }, 600);
+            
+            // Eliminar el sobre después de la animación
+            setTimeout(() => {
+                envelope.style.display = 'none';
+            }, 3000);
+        });
+    </script>
+
+    <!-- Countdown Script -->
+    <script>
+        // ========== COUNTDOWN TIMER ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            function updateCountdown() {
+                const countdown = document.getElementById('countdown');
+                if (!countdown) return;
+                
+                const weddingDate = new Date('2026-06-06T16:00:00').getTime();
+                const now = new Date().getTime();
+                const distance = weddingDate - now;
+                
+                if (distance < 0) {
+                    countdown.innerHTML = '<h1 class="its-today">¡Es Hoy!</h1>';
+                    return;
+                }
+                
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                const daysEl = document.getElementById('days');
+                const hoursEl = document.getElementById('hours');
+                const minutesEl = document.getElementById('minutes');
+                const secondsEl = document.getElementById('seconds');
+                
+                if (daysEl) daysEl.textContent = days;
+                if (hoursEl) hoursEl.textContent = hours;
+                if (minutesEl) minutesEl.textContent = minutes;
+                if (secondsEl) secondsEl.textContent = seconds;
+            }
+            
+            // Actualizar inmediatamente y luego cada segundo
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        });
+    </script>
+
+    <!-- Navbar Script -->
+    <script src="navbar-script.js"></script>
+
+    <script>
+// ========== DRAG TO SCROLL ==========
+const scrollContainer = document.getElementById('galleryScroll');
+let isDown = false;
+let startX;
+let scrollLeft;
+
+scrollContainer.addEventListener('mousedown', (e) => {
+    isDown = true;
+    scrollContainer.style.cursor = 'grabbing';
+    startX = e.pageX - scrollContainer.offsetLeft;
+    scrollLeft = scrollContainer.scrollLeft;
+});
+
+scrollContainer.addEventListener('mouseleave', () => {
+    isDown = false;
+    scrollContainer.style.cursor = 'grab';
+});
+
+scrollContainer.addEventListener('mouseup', () => {
+    isDown = false;
+    scrollContainer.style.cursor = 'grab';
+});
+
+scrollContainer.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - scrollContainer.offsetLeft;
+    const walk = (x - startX) * 2; // Velocidad del scroll
+    scrollContainer.scrollLeft = scrollLeft - walk;
+});
+
+// Touch support para móviles
+let touchStartX = 0;
+let touchScrollLeft = 0;
+
+scrollContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].pageX;
+    touchScrollLeft = scrollContainer.scrollLeft;
+});
+
+scrollContainer.addEventListener('touchmove', (e) => {
+    const touchX = e.touches[0].pageX;
+    const walk = (touchStartX - touchX) * 1.5;
+    scrollContainer.scrollLeft = touchScrollLeft + walk;
+});
+
+// ========== LIGHTBOX ==========
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+const polaroids = document.querySelectorAll('.polaroid-img');
+
+polaroids.forEach(img => {
+    img.addEventListener('click', (e) => {
+        // Prevenir si estamos arrastrando
+        if (scrollContainer.style.cursor === 'grabbing') return;
+        
+        lightboxImg.src = img.src;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    lightboxImg.src = '';
+    document.body.style.overflow = '';
+});
+
+lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        lightbox.classList.remove('active');
+        lightboxImg.src = '';
+        document.body.style.overflow = '';
+    }
+});
+</script>
+
+<script>
+    function copyToClipboard(text, button) {
+        navigator.clipboard.writeText(text).then(() => {
+            button.innerHTML = `
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            `;
+            button.classList.add('copied');
+            setTimeout(() => {
+                button.innerHTML = `
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2">
+                        <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                `;
+                button.classList.remove('copied');
+            }, 2000);
+        }).catch(err => {
+            console.error('Error al copiar:', err);
+            alert('No se pudo copiar. Intenta seleccionar manualmente.');
+        });
+    }
+</script>
+
+
+    <script>
+    // ========== CONFIGURACIÓN DEL WEBHOOK ==========
+    const WEBHOOK_URL = 'https://hook.us2.make.com/c59pfyuugfp7adjq68iny2bhy1oyocvy';
+
+    // ========== MANEJO DEL FORMULARIO ==========
+    document.getElementById('rsvpForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(e.target);
+        const messageDiv = document.getElementById('formMessage');
+        const submitBtn = e.target.querySelector('.form-submit');
+        const originalText = submitBtn.textContent;
+        
+        // Cambiar estado del botón
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+        messageDiv.classList.remove('visible');
+        
+        // Preparar datos
+        const datos = {
+            nombre: formData.get('nombre'),
+            email: formData.get('email'),
+            telefono: formData.get('telefono') || '',
+            confirmacion: formData.get('confirmacion'),
+            invitados: parseInt(formData.get('invitados')) || 0,
+            mensaje: formData.get('mensaje') || '',
+            fecha_envio: new Date().toLocaleString('es-MX')
+        };
+        
+        try {
+            const response = await fetch(WEBHOOK_URL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(datos)
+            });
+            
+            if (response.ok) {
+                // Éxito
+                messageDiv.textContent = '✅ ¡Confirmación enviada correctamente! Gracias por tu respuesta.';
+                messageDiv.className = 'form-message success visible';
+                e.target.reset();
+                
+                // Scroll suave al mensaje
+                messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            } else {
+                throw new Error('Error en la respuesta del servidor');
+            }
+        } catch (error) {
+            // Error
+            console.error('Error:', error);
+            messageDiv.textContent = '❌ Hubo un error al enviar. Por favor, intenta nuevamente.';
+            messageDiv.className = 'form-message error visible';
+        } finally {
+            // Restaurar botón
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            
+            // Ocultar mensaje después de 5 segundos
+            setTimeout(() => {
+                messageDiv.classList.remove('visible');
+            }, 5000);
+        }
+    });
+    </script>
+    
+</body>
+</html>
+</body>
+</html>

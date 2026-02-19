@@ -1,0 +1,236 @@
+/* ========== SECCIÓN NUESTRA HISTORIA ========== */
+.story-section {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d8 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoración de fondo sutil */
+.story-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(168, 149, 108, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.story-section::after {
+    content: '';
+    position: absolute;
+    bottom: -30%;
+    left: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(201, 184, 153, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.story-container {
+    max-width: 900px;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+/* Título de la sección */
+.story-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.story-title {
+    font-family: 'Pinyon Script', cursive;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    color: var(--dark-text);
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.story-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* Card elegante principal */
+.story-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 60px 50px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.08),
+        0 0 1px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 30px 80px rgba(0, 0, 0, 0.12),
+        0 0 1px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Detalle decorativo esquinas */
+.story-card::before,
+.story-card::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid var(--gold-light);
+    opacity: 0.4;
+}
+
+.story-card::before {
+    top: 20px;
+    left: 20px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+}
+
+.story-card::after {
+    bottom: 20px;
+    right: 20px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 10px;
+}
+
+/* Contenido del texto */
+.story-content {
+    position: relative;
+    z-index: 1;
+}
+
+.story-intro {
+    font-size: 1.1rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+.story-text {
+    font-size: 1.05rem;
+    line-height: 1.9;
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.story-text:last-child {
+    margin-bottom: 0;
+}
+
+/* Separador entre párrafos */
+.story-divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+    margin: 35px auto;
+    position: relative;
+}
+
+.story-divider::before {
+    content: '♥';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f5f0eb;
+    padding: 0 15px;
+    color: var(--gold);
+    font-size: 0.9rem;
+}
+
+/* Iniciales decorativas */
+.story-initials {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--gold);
+    text-align: center;
+    margin-top: 40px;
+    letter-spacing: 8px;
+    opacity: 0.8;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+    .story-section {
+        padding: 100px 20px 60px;
+    }
+    
+    .story-card {
+        padding: 40px 30px;
+    }
+    
+    .story-title {
+        font-size: 2.5rem;
+    }
+    
+    .story-intro {
+        font-size: 0.9rem;
+        letter-spacing: 2px;
+    }
+    
+    .story-text {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+    
+    .story-card::before,
+    .story-card::after {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .story-card {
+        padding: 35px 25px;
+        border-radius: 15px;
+    }
+    
+    .story-intro {
+        font-size: 0.85rem;
+    }
+    
+    .story-text {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    
+    .story-initials {
+        font-size: 2rem;
+        letter-spacing: 5px;
+    }
+}
