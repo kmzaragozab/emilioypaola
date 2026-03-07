@@ -170,7 +170,7 @@
         <section class="story-section" id="story">
             <div class="story-container">
                 <div style="text-align: center; padding: 40px 20px;">
-                    <h2 style="font-family: 'Pinyon Script', cursive; font-size: 3rem; color: var(--dark-text); margin-bottom: 20px;">Presentación</h2>
+                    <h2 style="font-family: 'Pinyon Script', cursive; font-size: 3rem; color: #8e9b6d; margin-bottom: 20px;">Presentación</h2>
                 </div>
                 <div class="story-card">
                     <div class="story-content">
@@ -217,7 +217,7 @@
                                     <circle cx="12" cy="12" r="10"/>
                                     <polyline points="12 6 12 12 16 14"/>
                                 </svg>
-                                <span>4:00 PM</span>
+                                <span>3:00 PM</span>
                             </div>
                             <a href="https://maps.app.goo.gl/xmKkyL5GC4g9FkRK8" 
                             target="_blank" class="maps-btn">
@@ -246,11 +246,24 @@
                                 ¡Anímate a brillar con nosotros!
                             </p>
                         </div>
-
                         <div class="dresscode-image">
+                            <!-- Imagen de ropa más pequeña -->
                             <img src="./images/clothes.png" alt="Ejemplo Dress Code" class="dc-clean-img">
+                            
+                            <!-- Paleta de colores sugeridos -->
+                            <div class="color-palette">
+                                <p class="color-palette-label">Colores Sugeridos</p>
+                                <div class="color-swatches">
+                                    <div class="color-swatch blue" title="Azul claro"></div>
+                                    <div class="color-swatch pink" title="Rosa"></div>
+                                    <div class="color-swatch mauve" title="Malva"></div>
+                                    <div class="color-swatch sage" title="Verde salvia"></div>
+                                    <div class="color-swatch gold" title="Dorado"></div>
+                                    <div class="color-swatch coral" title="Coral"></div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+</div>
 
                 </div><!-- fin event-grid -->
             </div>
@@ -320,19 +333,10 @@
                         <img src="./images/img2.jpg" alt="Foto 2" class="polaroid-img">
                     </div>
                     <div class="polaroid">
-                        <img src="./images/img3.jpg" alt="Foto 3" class="polaroid-img">
-                    </div>
-                    <div class="polaroid">
                         <img src="./images/img4.jpg" alt="Foto 4" class="polaroid-img">
                     </div>
                     <div class="polaroid">
                         <img src="./images/img5.jpg" alt="Foto 5" class="polaroid-img">
-                    </div>
-                    <div class="polaroid">
-                        <img src="./images/img6.jpg" alt="Foto 6" class="polaroid-img">
-                    </div>
-                    <div class="polaroid">
-                        <img src="./images/img7.jpg" alt="Foto 7" class="polaroid-img">
                     </div>
                     <div class="polaroid">
                         <img src="./images/img8.jpg" alt="Foto 8" class="polaroid-img">
@@ -558,7 +562,7 @@
                 const countdown = document.getElementById('countdown');
                 if (!countdown) return;
                 
-                const weddingDate = new Date('2026-06-06T16:00:00').getTime();
+                const weddingDate = new Date('2026-06-06T15:00:00').getTime();
                 const now = new Date().getTime();
                 const distance = weddingDate - now;
                 

@@ -28,11 +28,11 @@
 /* ===== HEADER ===== */
 .event-header {
     display: flex;
-    flex-direction: column; /* <--- ESTO ES LA CLAVE: Obliga a que se apilen verticalmente */
-    align-items: center;    /* Centra todo horizontalmente */
+    flex-direction: column; 
+    align-items: center;    
     justify-content: center;
     text-align: center;
-    width: 100%;            /* Asegura que ocupe el ancho disponible */
+    width: 100%;            
     margin-bottom: 50px;
 }
 
@@ -48,7 +48,7 @@
 .event-title {
     font-family: 'Pinyon Script', cursive;
     font-size: clamp(2.5rem, 8vw, 4.5rem);
-    color: var(--dark-text);
+    color: #8e9b6d; 
     margin-bottom: 25px;
     position: relative;
     display: inline-block;
@@ -163,7 +163,7 @@
 .card-name {
     font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
-    color: var(--dark-text);
+    color: #8e9b6d;
     font-weight: 600;
     margin-bottom: 15px;
     line-height: 1.3;
@@ -287,7 +287,7 @@
 .dresscode-title {
     font-family: 'Cormorant Garamond', serif;
     font-size: 2.5rem;
-    color: var(--dark-text);
+    color: #8e9b6d;
     font-weight: 600;
     margin-bottom: 20px;
     letter-spacing: 2px;
@@ -302,33 +302,86 @@
 }
 
 .dresscode-desc strong {
-    color: var(--dark-text);
+    color: #8e9b6d;
     font-weight: 600;
 }
 
-/* Imagen lado derecho — sin borde, sin fondo, pegada al card */
+/* Imagen lado derecho — imagen más pequeña + paleta de colores */
 .dresscode-image {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
     border-radius: 0 20px 20px 0;
     min-height: 320px;
-    background: transparent; /* Asegura que no tenga color de fondo raro */
+    background: transparent;
     
-    /* ESTO ES NUEVO: Centra el contenido y evita colapsos */
+    /* Layout vertical: imagen arriba, paleta abajo */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 30px 20px 20px;
+    gap: 20px;
 }
 
 .dresscode-image img {
-    position: relative; /* Ya no es absolute */
-    width: 100%;
-    height: auto;       /* Mantiene su proporción original */
-    max-height: 100%;   /* No deja que se salga de alto */
+    width: auto;
+    height: auto;
+    max-width: 70%;      /* Imagen más pequeña (70% del espacio) */
+    max-height: 200px;   /* Altura máxima controlada */
     object-fit: contain;
     z-index: 10;
 }
+
+/* Paleta de colores sugeridos */
+.color-palette {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.color-palette-label {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.color-swatches {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.color-swatch {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.9);
+    box-shadow: 
+        0 2px 8px rgba(0,0,0,0.15),
+        inset 0 1px 2px rgba(255,255,255,0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.color-swatch:hover {
+    transform: scale(1.15);
+    box-shadow: 
+        0 4px 12px rgba(0,0,0,0.25),
+        inset 0 1px 2px rgba(255,255,255,0.5);
+}
+
+/* Colores específicos basados en la paleta */
+.color-swatch.blue { background: #a8c5d4; }
+.color-swatch.pink { background: #e8b8c8; }
+.color-swatch.mauve { background: #d4b8c8; }
+.color-swatch.sage { background: #a8b89c; }
+.color-swatch.gold { background: #d4c4a0; }
+.color-swatch.coral { background: #e8b49c; }
 
 /* Placeholder elegante mientras no hay imagen */
 .dresscode-placeholder {
@@ -403,7 +456,18 @@
 
     .dresscode-image {
         border-radius: 0 0 20px 20px;
-        min-height: 280px;
+        min-height: 300px;
+        padding: 25px 15px 15px;
+    }
+    
+    .dresscode-image img {
+        max-width: 60%;      /* Más pequeña en móvil */
+        max-height: 180px;
+    }
+    
+    .color-swatch {
+        width: 32px;
+        height: 32px;
     }
 
     .dresscode-title {
